@@ -1,0 +1,36 @@
+{
+"objects":[
+{
+	"type":"rect",
+"center":[0,3.700000000000002],
+	"rotation":0,
+	"width":1,
+	"length":10,
+	"graphics":{"topColor":"0x111111","sideColor":"0xff0000","height":3.0} 
+},
+{
+	"type":"rect",
+"center":[0,-3.2000000000000015],
+	"rotation":0,
+	"width":1,
+	"length":10,
+	"graphics":{"topColor":"0x111111","sideColor":"0xff0000","height":3.0} 
+},
+{
+	"type":"rect",
+"center":[-2.800000000000001,0.7],
+	"rotation":-90,
+	"width":1,
+	"length":10,
+	"graphics":{"topColor":"0x111111","sideColor":"0xff0000","height":3.0} 
+},
+{
+	"type":"rect",
+"center":[3.3000000000000016,0.30000000000000004],
+	"rotation":90,
+	"width":1,
+	"length":10,
+	"graphics":{"topColor":"0x111111","sideColor":"0xff0000","height":3.0} 
+}
+]
+}
