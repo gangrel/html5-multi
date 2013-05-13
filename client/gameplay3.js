@@ -271,11 +271,33 @@ $(document).ready(function(){
 	fastSpeed = 0.3
 
 	effects = []
-	lastTime = 0
+	objects = {}//tablica asocjacyjna, bo sortowanie po id
+	lastTime = new Date().getTime()
+
+	updates = []
 
 	function updateWorld(){
+		//tutaj miejsce na wprowadzenie aktualizacji stanu
 		updateCame = false
+		updates.length = 0
 	}
+
+	function sendUpdate(actions){
+		// $.ajax({
+	 //        type: "POST",
+	 //        contentType: "application/json",
+	 //        dataType: "json",
+	 //        url: contextPath + "",
+	 //        data : JSON.stringify(glEntries),
+	 //        success: function(data) {
+	 //            alert("Success!!!");
+	 //        },
+	 //        error: function (jqXHR, textStatus, errorThrown) {
+	 //            alert(jqXHR + " : " + textStatus + " : " + errorThrown);
+	 //        }
+  //   	});
+	}
+
 	function render(time){
 		requestAnimationFrame(render)
 
@@ -285,7 +307,7 @@ $(document).ready(function(){
 		if(updateCame){
 			updateWorld()
 		}
-		counter+=0.01;
+		counter+=deltaTime*rad(30);
 
 		for(i in effects){
 			if(!effects[i].update(deltaTime)){
@@ -295,9 +317,11 @@ $(document).ready(function(){
 
 		light.position.set(cube.position.x+Math.cos(counter)*(Math.sin(counter)/2+1)*4,
 			cube.position.y+Math.sin(counter)*(Math.sin(counter)/2+1)*4+1,1)
-		
+
 		actions = getActions()
 		
+		sendUpdate(actions)
+
 		if(actions.fire)
 			console.log(actions)
 
