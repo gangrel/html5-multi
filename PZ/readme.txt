@@ -1,0 +1,1 @@
+Wersja ze swiatem z dodanym jednym graczem. Oczywiscie dodanie wiekszej ilosci bedzie wymagalo zmian w polozoeniu przy generowaniu obiektu. Zaraz siadam do pisania ruchu tego jednego gracza, wczesniej nadam mu ksztalt kola. 
