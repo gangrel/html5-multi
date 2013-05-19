@@ -1,0 +1,1 @@
+Przyklad prostego czatu posiadajacego server i kilenta.
